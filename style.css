@@ -68,4 +68,45 @@ transition: 0.2s;
 }
 
 
-.btn-primary:hover {
+.btn-primary:hover {.device-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.device-card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+}
+
+.device-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.device-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.device-info {
+    display: none;
+    background: #fff;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    animation: slideDown 0.35s ease forwards;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

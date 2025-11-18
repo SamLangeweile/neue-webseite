@@ -1,53 +1,113 @@
 <!DOCTYPE html>
-} else {
-el.style.display = 'none';
-}
-});
-}
-</script>
-</body>
-</html>
-```html
-<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <title>Services | Digital-FIX-ST</title>
-<link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 <header class="navbar">
-<div class="logo">Digital‑FIX‑ST</div>
-<nav>
-<a href="index.html">Start</a>
-<a href="services.html">Services</a>
-<a href="about.html">Über uns</a>
-<a href="contact.html">Kontakt</a>
-</nav>
+    <div class="logo">Digital-FIX-ST</div>
+    <nav>
+        <a href="index.html">Start</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">Über uns</a>
+        <a href="contact.html">Kontakt</a>
+    </nav>
 </header>
 
-
 <main class="content-container">
-<h1>Über uns</h1>
-<p>Wir sind <strong>Digital‑FIX‑ST</strong>, ein modernes Technologie‑Dienstleistungsunternehmen mit Sitz in Deutschland. Unser Fokus liegt darauf, digitale Geräte so einzurichten, zu optimieren und zu betreuen, dass sie für dich perfekt funktionieren.</p>
+    <h1>Unsere Services</h1>
 
+    <div class="device-grid">
 
-<h2>Unsere Mission</h2>
-<p>Wir möchten jedem den sicheren und effizienten Umgang mit Technik ermöglichen – egal ob PC, Mac, Smartphone oder Tablet. Dabei setzen wir auf Qualität, Transparenz und professionelle Umsetzung.</p>
+        <!-- Windows -->
+        <div class="device-card" onclick="toggleInfo('pc-info')">
+            <img class="device-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" alt="Windows-Logo">
+            <h3>Windows PC</h3>
+        </div>
+        <div id="pc-info" class="device-info">
+            <ul>
+                <li>Windows 10 & 11 Installation & Upgrade</li>
+                <li>Hardware-Aufrüstung (RAM, SSD, Grafikkarte)</li>
+                <li>Software- und Systemfehlerbehebung</li>
+                <li>Leistungsoptimierung & Treiberupdate</li>
+                <li>Benutzer- und Sicherheitskonfiguration</li>
+            </ul>
+        </div>
 
+        <!-- Apple iPhone -->
+        <div class="device-card" onclick="toggleInfo('iphone-info')">
+            <img class="device-icon" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple-Logo">
+            <h3>Apple iPhone</h3>
+        </div>
+        <div id="iphone-info" class="device-info">
+            <ul>
+                <li>Einrichtung und Datenübertragung</li>
+                <li>iCloud Einrichtung, Backup & Wiederherstellung</li>
+                <li>App- & Software-Fehlerbehebung</li>
+                <li>WLAN, Mobile Daten & Akku-Probleme</li>
+            </ul>
+        </div>
 
-<h2>Was uns auszeichnet</h2>
-<ul>
-<li>📌 im Digital‑Support</li>
-<li>📌 Schnelle Hilfe per Fernwartung oder vor Ort</li>
-<li>📌 Datenschutz & Sicherheit haben höchste Priorität</li>
-<li>📌 Klare, faire Preise</li>
-</ul>
+        <!-- Apple Mac -->
+        <div class="device-card" onclick="toggleInfo('mac-info')">
+            <img class="device-icon" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple-Logo">
+            <h3>Apple Mac</h3>
+        </div>
+        <div id="mac-info" class="device-info">
+            <ul>
+                <li>macOS Installation & Optimierung</li>
+                <li>iCloud & Apple-ID Support</li>
+                <li>Systemfehler & Softwareprobleme</li>
+                <li>Hardware-Upgrades (wenn möglich)</li>
+            </ul>
+        </div>
 
+        <!-- Android -->
+        <div class="device-card" onclick="toggleInfo('android-info')">
+            <img class="device-icon" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android-Logo">
+            <h3>Android Geräte</h3>
+        </div>
+        <div id="android-info" class="device-info">
+            <ul>
+                <li>Einrichtung aller Marken</li>
+                <li>Datenübertragung</li>
+                <li>Fehlerbehebung Apps / System</li>
+                <li>Optimierung & Beratung</li>
+            </ul>
+        </div>
 
-<h2>Unser Standort</h2>
-<p>Digital‑FIX‑ST hat seinen Sitz in <strong>Deutschland</strong> und betreut Kunden deutschlandweit – sowohl privat als auch geschäftlich.</p>
+        <!-- TV / Smart TV -->
+        <div class="device-card" onclick="toggleInfo('tv-info')">
+            <img class="device-icon" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Flat_TV_icon.svg" alt="TV-Icon">
+            <h3>TV / Smart TV</h3>
+        </div>
+        <div id="tv-info" class="device-info">
+            <ul>
+                <li>Smart-TV Einrichtung</li>
+                <li>App-Installation & Anmeldung</li>
+                <li>WLAN-Optimierung</li>
+                <li>Bildeinstellungen & Tonoptimierung</li>
+            </ul>
+        </div>
+
+    </div>
 </main>
+
+<script>
+function toggleInfo(id) {
+    document.querySelectorAll('.device-info').forEach(el => {
+        if (el.id === id) {
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        } else {
+            el.style.display = 'none';
+        }
+    });
+}
+</script>
+
 </body>
 </html>
