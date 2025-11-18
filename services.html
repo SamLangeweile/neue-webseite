@@ -3,111 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <title>Services | Digital-FIX-ST</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 </head>
-
 <body>
 <header class="navbar">
-    <div class="logo">Digital-FIX-ST</div>
-    <nav>
-        <a href="index.html">Start</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">Über uns</a>
-        <a href="contact.html">Kontakt</a>
-    </nav>
+  <div class="logo">Digital‑FIX‑ST</div>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">Über uns</a>
+    <a href="contact.html">Kontakt</a>
+  </nav>
 </header>
 
 <main class="content-container">
-    <h1>Unsere Services</h1>
+  <h1>Unsere Services</h1>
+  <p class="lead">Klicke auf ein Icon – wir zeigen dir genau, welche Leistungen wir für dieses Gerät anbieten.</p>
 
-    <div class="device-grid">
+  <div class="device-grid">
 
-        <!-- Windows -->
-        <div class="device-card" onclick="toggleInfo('pc-info')">
-            <img class="device-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" alt="Windows-Logo">
-            <h3>Windows PC</h3>
-        </div>
-        <div id="pc-info" class="device-info">
-            <ul>
-                <li>Windows 10 & 11 Installation & Upgrade</li>
-                <li>Hardware-Aufrüstung (RAM, SSD, Grafikkarte)</li>
-                <li>Software- und Systemfehlerbehebung</li>
-                <li>Leistungsoptimierung & Treiberupdate</li>
-                <li>Benutzer- und Sicherheitskonfiguration</li>
-            </ul>
-        </div>
-
-        <!-- Apple iPhone -->
-        <div class="device-card" onclick="toggleInfo('iphone-info')">
-            <img class="device-icon" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple-Logo">
-            <h3>Apple iPhone</h3>
-        </div>
-        <div id="iphone-info" class="device-info">
-            <ul>
-                <li>Einrichtung und Datenübertragung</li>
-                <li>iCloud Einrichtung, Backup & Wiederherstellung</li>
-                <li>App- & Software-Fehlerbehebung</li>
-                <li>WLAN, Mobile Daten & Akku-Probleme</li>
-            </ul>
-        </div>
-
-        <!-- Apple Mac -->
-        <div class="device-card" onclick="toggleInfo('mac-info')">
-            <img class="device-icon" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple-Logo">
-            <h3>Apple Mac</h3>
-        </div>
-        <div id="mac-info" class="device-info">
-            <ul>
-                <li>macOS Installation & Optimierung</li>
-                <li>iCloud & Apple-ID Support</li>
-                <li>Systemfehler & Softwareprobleme</li>
-                <li>Hardware-Upgrades (wenn möglich)</li>
-            </ul>
-        </div>
-
-        <!-- Android -->
-        <div class="device-card" onclick="toggleInfo('android-info')">
-            <img class="device-icon" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android-Logo">
-            <h3>Android Geräte</h3>
-        </div>
-        <div id="android-info" class="device-info">
-            <ul>
-                <li>Einrichtung aller Marken</li>
-                <li>Datenübertragung</li>
-                <li>Fehlerbehebung Apps / System</li>
-                <li>Optimierung & Beratung</li>
-            </ul>
-        </div>
-
-        <!-- TV / Smart TV -->
-        <div class="device-card" onclick="toggleInfo('tv-info')">
-            <img class="device-icon" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Flat_TV_icon.svg" alt="TV-Icon">
-            <h3>TV / Smart TV</h3>
-        </div>
-        <div id="tv-info" class="device-info">
-            <ul>
-                <li>Smart-TV Einrichtung</li>
-                <li>App-Installation & Anmeldung</li>
-                <li>WLAN-Optimierung</li>
-                <li>Bildeinstellungen & Tonoptimierung</li>
-            </ul>
-        </div>
-
+    <div class="device-card" onclick="toggleInfo('pc-info')">
+      <img class="device-icon" src="icons/monitor.svg" alt="PC">
+      <h3>Windows PC</h3>
     </div>
+    <div id="pc-info" class="device-info">
+      <ul class="service-list-emoji">
+        <li>✅ Windows 10 → Windows 11 Upgrade</li>
+        <li>✅ Hardware‑Aufrüstung (RAM, SSD, GPU)</li>
+        <li>✅ Software‑ und Treiber‑Fehlerbehebung</li>
+        <li>✅ Sicherheits‑ und Datenschutzkonfiguration</li>
+        <li>✅ Performance‑Optimierung</li>
+      </ul>
+    </div>
+
+    <div class="device-card" onclick="toggleInfo('iphone-info')">
+      <img class="device-icon" src="icons/phone.svg" alt="iPhone">
+      <h3>Apple iPhone</h3>
+    </div>
+    <div id="iphone-info" class="device-info">
+      <ul class="service-list-emoji">
+        <li>✅ Einrichtung & Datenübertragung</li>
+        <li>✅ iCloud Backup & Wiederherstellung</li>
+        <li>✅ App‑ & Software‑Fehlerbehebung</li>
+        <li>✅ Beratung & Sicherheitseinstellungen</li>
+      </ul>
+    </div>
+
+    <div class="device-card" onclick="toggleInfo('mac-info')">
+      <img class="device-icon" src="icons/laptop.svg" alt="Mac">
+      <h3>Apple Mac</h3>
+    </div>
+    <div id="mac-info" class="device-info">
+      <ul class="service-list-emoji">
+        <li>✅ macOS Installation & Upgrade</li>
+        <li>✅ iCloud & Apple‑ID Support</li>
+        <li>✅ Software‑ & Systemdiagnose</li>
+        <li>✅ Hardware‑Upgrades (wenn möglich)</li>
+      </ul>
+    </div>
+
+    <div class="device-card" onclick="toggleInfo('android-info')">
+      <img class="device-icon" src="icons/android.svg" alt="Android">
+      <h3>Android Geräte</h3>
+    </div>
+    <div id="android-info" class="device-info">
+      <ul class="service-list-emoji">
+        <li>✅ Einrichtung (Samsung, Xiaomi, Google u.a.)</li>
+        <li>✅ Datenübertragung & Backup</li>
+        <li>✅ App‑ & System‑Fehlerbehebung</li>
+        <li>✅ Konfiguration & Optimierung</li>
+      </ul>
+    </div>
+
+    <div class="device-card" onclick="toggleInfo('tv-info')">
+      <img class="device-icon" src="icons/tv.svg" alt="TV">
+      <h3>TV / Smart TV</h3>
+    </div>
+    <div id="tv-info" class="device-info">
+      <ul class="service-list-emoji">
+        <li>✅ Smart‑TV Einrichtung & App‑Installation</li>
+        <li>✅ WLAN‑Optimierung & Netzwerk‑Fehlerbehebung</li>
+        <li>✅ Bild‑ & Toneinstellungen</li>
+        <li>✅ Streaming‑App Support</li>
+      </ul>
+    </div>
+
+  </div>
 </main>
 
 <script>
 function toggleInfo(id) {
-    document.querySelectorAll('.device-info').forEach(el => {
-        if (el.id === id) {
-            el.style.display = el.style.display === 'block' ? 'none' : 'block';
-        } else {
-            el.style.display = 'none';
-        }
-    });
+  document.querySelectorAll('.device-info').forEach(el => {
+    if (el.id === id) {
+      if (el.style.display === 'block') {
+        // hide with animation
+        el.classList.remove('show');
+        setTimeout(()=> el.style.display='none', 300);
+      } else {
+        // hide others then show
+        document.querySelectorAll('.device-info').forEach(x => { x.style.display='none'; x.classList.remove('show'); });
+        el.style.display = 'block';
+        setTimeout(()=> el.classList.add('show'), 10);
+      }
+    }
+  });
 }
 </script>
-
 </body>
 </html>
